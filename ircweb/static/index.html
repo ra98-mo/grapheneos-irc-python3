@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>IRC</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<form id="login" autocomplete="off">
+  <h1>Join chat</h1>
+  <input id="nick" placeholder="Nickname" maxlength="20" autocapitalize="off" required>
+  <button>Connect</button>
+  <p id="loginerr" class="err"></p>
+</form>
+<div id="app" hidden>
+  <header>
+    <button id="menu" aria-label="Channels and users">☰</button>
+    <span id="title">No channel</span>
+  </header>
+  <aside id="side">
+    <h2>Chats</h2><ul id="tabs"></ul>
+    <h2>Users</h2><ul id="users"></ul>
+  </aside>
+  <main id="log" aria-live="polite"></main>
+  <form id="send" autocomplete="off">
+    <input id="text" placeholder="Message or /help" autocapitalize="sentences" enterkeyhint="send">
+    <button>Send</button>
+  </form>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
